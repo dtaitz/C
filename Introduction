@@ -1,0 +1,16 @@
+David Taitz 
+
+HUDS on the Fly - Documentation
+
+Our website is currently supported on the CS50 appliance, much like in problem set 7. In order to access the initial page to log-in, visit http://www.localhost/login.php. Here, the user, if they have already registered and created a username/password, may log in to see the menu. If not, they may click the "register" link to create an account. 
+
+They will then be redirected to http://www.localhost/register.php. Here, the user may input a username and password of his or her choice. They also have the option to choose their house from a drop-down menu and to input their email address. Doing so gives the user the capability to receive an email when 
+Our website is currently supported on the CS50 appliance, much like in problem set 7. In order to access the initial page to log-in, visit http://www.localhost/login.php. Here, the user, if they have already registered and created a username/password, may log in to see the menu. If not, they may click the "register" link to create an account. 
+
+They will then be redirected to http://www.localhost/register.php. Here, the user may input a username and password of his or her choice. They also have the option to choose their house from a drop-down menu and to input their email address. Doing so gives the user the capability to receive an email when an item they have added to their favorites is on the menu for the day.
+
+Once the user registers or logs in, the menu page is displayed. The page consists of a list of the breakfast, lunch, and dinner options for that day. Next to each item is a drop down menu. Here, the user can choose to rate the item from 1 (want to see much less of this item) to 5 (want to see much more of this item). Additinally, the average rating for an item is displayed next to the rating bar. This allows users to gauge what their peers think of certain items and allows them to make more informed dining choices. If the average rating that is displayed is zero, then the itme has not yet been rated. After you have rated all the items you desire, you can press the submit button. This information will then be stored in the databse, which HUDS can access and then use to incorporate into their meal planning. 
+
+Another option in the drop-down menu is "favorite." By selecting this option, you automatically give the item a rating of 5 and add it to your favorites databse. You will now receive an email alerting you when that item is on the day's menu.
+
+Finally, at the bottom of the menu hompage is a link to "favorites," where a user may view a list of the items they have favorited. There is also a button linking to log out, which ends the user's session and requires them to log back in when they visit the site. 
