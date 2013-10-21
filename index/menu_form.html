@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+    <head>
+         <link rel="stylesheet" href="css/content.css" type="text/css" >
+         <link rel="stylesheet" href="css/menuheader.css" type="text/css" >
+         <link rel="stylesheet" href="css/unstyled.css" type="text/css" >
+         <!--link rel="stylesheet" href="css/menufooter.css" type="text/css"-->
+    </head>
+    
+    <body>
+    
+        <header class="site-header">
+            <a class="logo" href="http://www.harvard.edu">HUDS on the Fly</a>
+        </header>
+        
+    <div class="menu-wrapper-inner">
+
+        <div class="guidelines-notification">
+            <ul>
+                <li>Please rate the today's items on the HUDS house menu</li>
+                <li>Ratings are between 1 (want less) and 5 (want more)</li>
+                <li>You can also add an item to your Favorites by choosing Favorite</li>
+                <li>By adding an item to your Favorites, you will receive an email when your favorite item appears on the menu</li>
+                <li>Choosing favorite is the equivalent to a 5 rating</li>
+                <li>You can view your favorites <a href="https://www.google.com>">here</a>
+            </ul>
+        </div>
+
+
+        <form action="index.php" method="post">
+              <div class="menu-container clear-fix">
+                <div class="menu-wrapper">
+                    <div class= "menu-breakfast">
+                       <table id="table table-striped">
+                       <br/>
+                       <br/>
+                       <br/>
+                       <br/>
+                       <br/>
+                       <thead>
+                         <tr>
+                            <th>Breakfast</th>
+                         </tr>
+                       </thead>
+                       <tbody>
+                         <?php
+                            foreach ($breakfasts as $breakfast) 
+                            {
+                               print("<tr>");
+                               print("<td>" . $breakfast["category"] . "</td>");
+                               print("<td>" . $breakfast["name"] . "</td>"); 
+                        ?>
+                               <td class="control-group">
+                                    <?php echo "<select name='{$breakfast['name']}' type='text'> "?>
+                                    <!--<option data-placeholder="true"></option> -->
+                                    <option value="+">+</option>
+                                        <?php echo "<option value='{$breakfast['name']}^{$breakfast['recipe']}^{$breakfast['category']}^1'>1</option>" ?>
+                                        <?php echo "<option value='{$breakfast['name']}^{$breakfast['recipe']}^{$breakfast['category']}^2'>2</option>" ?>
+                                        <?php echo "<option value='{$breakfast['name']}^{$breakfast['recipe']}^{$breakfast['category']}^3'>3</option>" ?>
+                                        <?php echo "<option value='{$breakfast['name']}^{$breakfast['recipe']}^{$breakfast['category']}^4'>4</option>" ?>
+                                        <?php echo "<option value='{$breakfast['name']}^{$breakfast['recipe']}^{$breakfast['category']}^5'>5</option>" ?>
+                                        <?php echo "<option value='{$breakfast['name']}^{$breakfast['recipe']}^{$breakfast['category']}^favorite'>Favorite</option>" ?>                    
+                                    </select>
+                                </td>
+                         <?php
+                               print("</tr>");
+                     
+                            }
+                         ?>
+                       </tbody> 
+                    </table>
+                   </div>
+                </div>
+
+                <div class="menu-wrapper">
+                    <div class= "menu-lunch">
+                       <table class="table table-striped">
+                       <br/>
+                       <br/>
+                       <br/>
+                       <br/>
+                       <br/>
+                       <thead>
+                         <tr>
+                            <th>Lunch</th>
+                         </tr>
+                       </thead>
+                       <tbody>
+                         <?php
+                            foreach ($lunchs as $lunch) 
+                            {        
+                               print("<tr>");
+                               print("<td>" . $lunch["category"] . "</td>");
+                               print("<td>" . $lunch["name"] . "</td>"); 
+                        ?>
+                               <td class="control-group">
+                                    <?php echo "<select name='{$lunch['name']}' type='text'> "?>
+                                    <!--<option data-placeholder="true"></option> -->
+                                    <option value="+">+</option>
+                                        <?php echo "<option value='{$lunch['name']}^{$lunch['recipe']}^{$lunch['category']}^1'>1</option>" ?>
+                                        <?php echo "<option value='{$lunch['name']}^{$lunch['recipe']}^{$lunch['category']}^2'>2</option>" ?>
+                                        <?php echo "<option value='{$lunch['name']}^{$lunch['recipe']}^{$lunch['category']}^3'>3</option>" ?>
+                                        <?php echo "<option value='{$lunch['name']}^{$lunch['recipe']}^{$lunch['category']}^4'>4</option>" ?>
+                                        <?php echo "<option value='{$lunch['name']}^{$lunch['recipe']}^{$lunch['category']}^5'>5</option>" ?>
+                                        <?php echo "<option value='{$lunch['name']}^{$lunch['recipe']}^{$lunch['category']}^favorite'>Favorite</option>" ?>  
+                                    </select>
+                                </td>
+                         <?php
+                               print("</tr>");
+                     
+                            }
+                         ?>
+                       </tbody> 
+                    </table>
+                   </div>
+                  </div>
+
+                  <div class="menu-wrapper">
+                    <div class= "menu-dinner">
+                       <table class="table table-striped">
+                         <br/>
+                         <br/>
+                         <br/>
+                         <br/>
+                         <br/>
+                       <thead>
+                         <tr>
+                            <th>Dinner</th>
+                         </tr>
+                       </thead>
+                       <tbody>
+                         <?php
+                            foreach ($dinners as $dinner) 
+                            {        
+                               print("<tr>");
+                               print("<td>" . $dinner["category"] . "</td>");
+                               print("<td>" . $dinner["name"] . "</td>"); 
+                        ?>
+                               <td class="control-group">
+                                    <?php echo "<select name='{$dinner['name']}' type='text'> "?>
+                                    <!--<option data-placeholder="true"></option> -->
+                                    <option value="+">+</option>
+                                        <?php echo "<option value='{$dinner['name']}^{$dinner['recipe']}^{$dinner['category']}^1'>1</option>" ?>
+                                        <?php echo "<option value='{$dinner['name']}^{$dinner['recipe']}^{$dinner['category']}^2'>2</option>" ?>
+                                        <?php echo "<option value='{$dinner['name']}^{$dinner['recipe']}^{$dinner['category']}^3'>3</option>" ?>
+                                        <?php echo "<option value='{$dinner['name']}^{$dinner['recipe']}^{$dinner['category']}^4'>4</option>" ?>
+                                        <?php echo "<option value='{$dinner['name']}^{$dinner['recipe']}^{$dinner['category']}^5'>5</option>" ?>
+                                        <?php echo "<option value='{$dinner['name']}^{$dinner['recipe']}^{$dinner['category']}^favorite'>Favorite</option>" ?>  
+                                    </select>
+                                </td>
+                         <?php
+                               print("</tr>");
+                     
+                            }
+                         ?>
+                       </tbody> 
+                    </table>
+                   </div>
+                  </div>
+                  <div class="control-group">
+                        <button type="submit" class="btn">Submit</button>
+                  </div>
+                 </form>
+               </div>
+           </div>
+         </body>
+
+   <footer class="site-footer">  
+
+        <div class="link">
+            <a href="favorites.php">Favorites</a>
+        </div>
+        <div>
+            <a href="logout.php">Log Out</a>
+        </div>  
+ 
+    </footer>
+    
+  
+    
+</html>
+
+
+
